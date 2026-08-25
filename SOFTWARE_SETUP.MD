@@ -81,7 +81,6 @@ Commit this file to the repo. It's just a text list of package names + versions 
 ```powershell
 yolo checks
 ```
-
 This should print your Python version, PyTorch version, and CUDA availability (CUDA `False` is fine on non-GPU laptops — inference will just run on CPU). If this command fails, see Troubleshooting below.
 
 ## 8. Run a sanity check
@@ -104,9 +103,6 @@ This almost always means `pip install` and the `python`/`yolo` command are point
 
 **`Activate.ps1 cannot be loaded because running scripts is disabled`**
 You skipped step 2. Run the `Set-ExecutionPolicy` command above, then retry activation.
-
-**Don't clone the Ultralytics GitHub repo into this project folder.** We only need the pip package (`pip install ultralytics`), not the source repo. A folder literally named `ultralytics` sitting next to your own code can shadow the installed package and cause import errors.
-
 ---
 
 ## Daily workflow (after setup is done once)
